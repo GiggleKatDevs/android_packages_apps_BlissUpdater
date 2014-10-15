@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.liquid.updater.misc;
+package com.bliss.updater.misc;
 
 import android.content.Context;
 import android.util.Log;

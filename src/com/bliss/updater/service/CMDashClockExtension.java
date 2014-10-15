@@ -7,17 +7,17 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.liquid.updater.service;
+package com.bliss.updater.service;
 
 import android.content.Intent;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.liquid.updater.R;
-import com.liquid.updater.UpdatesSettings;
-import com.liquid.updater.misc.State;
-import com.liquid.updater.misc.UpdateInfo;
+import com.bliss.updater.R;
+import com.bliss.updater.UpdatesSettings;
+import com.bliss.updater.misc.State;
+import com.bliss.updater.misc.UpdateInfo;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 

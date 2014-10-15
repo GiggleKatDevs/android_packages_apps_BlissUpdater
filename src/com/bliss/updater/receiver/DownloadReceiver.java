@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.liquid.updater.receiver;
+package com.bliss.updater.receiver;
 
 import android.app.DownloadManager;
 import android.app.DownloadManager.Query;
@@ -24,14 +24,14 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.liquid.updater.R;
-import com.liquid.updater.UpdateApplication;
-import com.liquid.updater.UpdatesSettings;
-import com.liquid.updater.misc.Constants;
-import com.liquid.updater.misc.UpdateInfo;
-import com.liquid.updater.service.DownloadService;
-import com.liquid.updater.utils.MD5;
-import com.liquid.updater.utils.Utils;
+import com.bliss.updater.R;
+import com.bliss.updater.UpdateApplication;
+import com.bliss.updater.UpdatesSettings;
+import com.bliss.updater.misc.Constants;
+import com.bliss.updater.misc.UpdateInfo;
+import com.bliss.updater.service.DownloadService;
+import com.bliss.updater.utils.MD5;
+import com.bliss.updater.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;

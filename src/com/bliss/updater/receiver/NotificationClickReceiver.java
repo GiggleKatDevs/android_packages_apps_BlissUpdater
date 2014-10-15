@@ -7,13 +7,13 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.liquid.updater.receiver;
+package com.bliss.updater.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.liquid.updater.UpdatesSettings;
+import com.bliss.updater.UpdatesSettings;
 
 public class NotificationClickReceiver extends BroadcastReceiver{
     @Override
