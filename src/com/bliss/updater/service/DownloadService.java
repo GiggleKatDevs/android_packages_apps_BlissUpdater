@@ -96,7 +96,7 @@ public class DownloadService extends IntentService {
     }
 
     private String getServerUri() {
-        String propertyUri = SystemProperties.get("liquid.updater.uri");
+        String propertyUri = SystemProperties.get("bliss.updater.uri");
         if (!TextUtils.isEmpty(propertyUri)) {
             return propertyUri;
         }

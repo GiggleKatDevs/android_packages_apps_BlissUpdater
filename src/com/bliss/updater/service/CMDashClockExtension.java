@@ -26,9 +26,9 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 public class CMDashClockExtension extends DashClockExtension {
-    private static final String TAG = "liquidDashClockExtension";
+    private static final String TAG = "BlissDashClockExtension";
 
-    public static final String ACTION_DATA_UPDATE = "com.liquid.updater.action.DASHCLOCK_DATA_UPDATE";
+    public static final String ACTION_DATA_UPDATE = "com.bliss.updater.action.DASHCLOCK_DATA_UPDATE";
 
     private static final int MAX_BODY_ITEMS = 3;
 
@@ -81,7 +81,7 @@ public class CMDashClockExtension extends DashClockExtension {
         // Publish the extension data update.
         publishUpdate(new ExtensionData()
                 .visible(!updates.isEmpty())
-                .icon(R.drawable.ic_extension_liquid)
+                .icon(R.drawable.ic_extension_bliss)
                 .status(res.getQuantityString(R.plurals.extension_status, count, count))
                 .expandedTitle(res.getQuantityString(R.plurals.extension_expandedTitle, count, count))
                 .expandedBody(expandedBody.toString())

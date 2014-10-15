@@ -11,7 +11,7 @@ package com.bliss.updater.misc;
 
 public class Constants {
     // Download related
-    public static final String UPDATES_FOLDER = "liquidupdater";
+    public static final String UPDATES_FOLDER = "blissupdater";
     public static final String DOWNLOAD_ID = "download_id";
     public static final String DOWNLOAD_MD5 = "download_md5";
     public static final String DOWNLOAD_INCREMENTAL_FOR = "download_incremental_for";

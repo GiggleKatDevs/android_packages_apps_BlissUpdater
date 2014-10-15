@@ -61,11 +61,11 @@ public class UpdateCheckService extends IntentService {
     private static final boolean TESTING_DOWNLOAD = false;
 
     // request actions
-    public static final String ACTION_CHECK = "com.liquid.liquidupdater.action.CHECK";
-    public static final String ACTION_CANCEL_CHECK = "com.liquid.liquidupdater.action.CANCEL_CHECK";
+    public static final String ACTION_CHECK = "com.bliss.blissupdater.action.CHECK";
+    public static final String ACTION_CANCEL_CHECK = "com.bliss.blissupdater.action.CANCEL_CHECK";
 
     // broadcast actions
-    public static final String ACTION_CHECK_FINISHED = "com.liquid.liquidupdater.action.UPDATE_CHECK_FINISHED";
+    public static final String ACTION_CHECK_FINISHED = "com.bliss.blissupdater.action.UPDATE_CHECK_FINISHED";
     // extra for ACTION_CHECK_FINISHED: total amount of found updates
     public static final String EXTRA_UPDATE_COUNT = "update_count";
     // extra for ACTION_CHECK_FINISHED: amount of updates that are newer than what is installed
@@ -153,7 +153,7 @@ public class UpdateCheckService extends IntentService {
 
             // Get the notification ready
             Notification.Builder builder = new Notification.Builder(this)
-                    .setSmallIcon(R.drawable.liquid_updater)
+                    .setSmallIcon(R.drawable.bliss_updater)
                     .setWhen(System.currentTimeMillis())
                     .setTicker(res.getString(R.string.not_new_updates_found_ticker))
                     .setContentTitle(res.getString(R.string.not_new_updates_found_title))
@@ -226,7 +226,7 @@ public class UpdateCheckService extends IntentService {
     }
 
     private URI getServerURI() {
-        String propertyUpdateUri = SystemProperties.get("liquid.updater.uri");
+        String propertyUpdateUri = SystemProperties.get("bliss.updater.uri");
         if (!TextUtils.isEmpty(propertyUpdateUri)) {
             return URI.create(propertyUpdateUri);
         }
@@ -298,7 +298,7 @@ public class UpdateCheckService extends IntentService {
         }
 
         JSONObject params = new JSONObject();
-        params.put("device", TESTING_DOWNLOAD ? "liquidtestdevice" : Utils.getDeviceType());
+        params.put("device", TESTING_DOWNLOAD ? "blisstestdevice" : Utils.getDeviceType());
         params.put("channels", channels);
         params.put("source_incremental", Utils.getIncremental());
 

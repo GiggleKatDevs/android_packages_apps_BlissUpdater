@@ -54,11 +54,11 @@ public class Utils {
     }
 
     public static String getDeviceType() {
-        return SystemProperties.get("ro.liquid.device");
+        return SystemProperties.get("ro.bliss.device");
     }
 
     public static String getInstalledVersion() {
-        return SystemProperties.get("ro.liquid.version");
+        return SystemProperties.get("ro.bliss.version");
     }
 
     public static int getInstalledApiLevel() {

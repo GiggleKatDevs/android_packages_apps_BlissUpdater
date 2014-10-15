@@ -39,12 +39,12 @@ import java.io.IOException;
 public class DownloadReceiver extends BroadcastReceiver{
     private static final String TAG = "DownloadReceiver";
 
-    public static final String ACTION_START_DOWNLOAD = "com.liquid.liquidupdater.action.START_DOWNLOAD";
+    public static final String ACTION_START_DOWNLOAD = "com.bliss.blissupdater.action.START_DOWNLOAD";
     public static final String EXTRA_UPDATE_INFO = "update_info";
 
-    public static final String ACTION_DOWNLOAD_STARTED = "com.liquid.liquidupdater.action.DOWNLOAD_STARTED";
+    public static final String ACTION_DOWNLOAD_STARTED = "com.bliss.blissupdater.action.DOWNLOAD_STARTED";
 
-    private static final String ACTION_INSTALL_UPDATE = "com.liquid.liquidupdater.action.INSTALL_UPDATE";
+    private static final String ACTION_INSTALL_UPDATE = "com.bliss.blissupdater.action.INSTALL_UPDATE";
     private static final String EXTRA_FILENAME = "filename";
 
     @Override
@@ -178,7 +178,7 @@ public class DownloadReceiver extends BroadcastReceiver{
             } else {
                 String updateUiName = UpdateInfo.extractUiName(updateFile.getName());
 
-                builder.setSmallIcon(R.drawable.liquid_updater);
+                builder.setSmallIcon(R.drawable.bliss_updater);
                 builder.setContentTitle(context.getString(R.string.not_download_success));
                 builder.setContentText(updateUiName);
                 builder.setTicker(context.getString(R.string.not_download_success));
