@@ -105,6 +105,6 @@
     <string name="loading_changelog">Loading\u2026</string>
 
     <!-- DashClock extension strings -->
-    <string name="extension_label">Liquid Updates</string>
+    <string name="extension_label">Bliss Updates</string>
     <string name="extension_description">Displays number of new updates available.</string>
 </resources>
