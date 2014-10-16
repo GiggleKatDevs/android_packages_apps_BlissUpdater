@@ -7,14 +7,14 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.misc;
+package com.gigglekat.updater.misc;
 
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 
-import com.bliss.updater.utils.Utils;
+import com.gigglekat.updater.utils.Utils;
 
 import java.io.File;
 import java.io.Serializable;
