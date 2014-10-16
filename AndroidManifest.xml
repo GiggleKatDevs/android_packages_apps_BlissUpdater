@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bliss.updater"
+    package="com.gigglekat.updater"
     android:versionCode="3"
     android:versionName="2.2" >
 
@@ -22,11 +22,11 @@
         android:icon="@drawable/ic_launcher"
         android:theme="@style/Theme.Main"
         android:label="@string/app_name"
-        android:name="com.bliss.updater.UpdateApplication"
+        android:name="com.gigglekat.updater.UpdateApplication"
         android:supportsRtl="true">
 
-        <service android:name="com.bliss.updater.service.CMDashClockExtension"
-            android:icon="@drawable/ic_extension_bliss"
+        <service android:name="com.gigglekat.updater.service.CMDashClockExtension"
+            android:icon="@drawable/ic_extension_gigglekat"
             android:label="@string/extension_label"
             android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
             <intent-filter>
@@ -50,31 +50,31 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.bliss.updater.service.UpdateCheckService" />
-        <service android:name="com.bliss.updater.service.DownloadService" />
+        <service android:name="com.gigglekat.updater.service.UpdateCheckService" />
+        <service android:name="com.gigglekat.updater.service.DownloadService" />
 
-        <receiver android:name="com.bliss.updater.receiver.UpdateCheckReceiver">
+        <receiver android:name="com.gigglekat.updater.receiver.UpdateCheckReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.bliss.updater.receiver.DownloadReceiver">
+        <receiver android:name="com.gigglekat.updater.receiver.DownloadReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
-                <action android:name="com.bliss.blissupdater.action.START_DOWNLOAD"/>
+                <action android:name="com.gigglekat.gigglekatupdater.action.START_DOWNLOAD"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.bliss.updater.receiver.NotificationClickReceiver">
+        <receiver android:name="com.gigglekat.updater.receiver.NotificationClickReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.bliss.updater.receiver.CheckFinishReceiver">
+        <receiver android:name="com.gigglekat.updater.receiver.CheckFinishReceiver">
             <intent-filter>
-                <action android:name="com.bliss.blissupdater.action.UPDATE_CHECK_FINISHED"/>
+                <action android:name="com.gigglekat.gigglekatupdater.action.UPDATE_CHECK_FINISHED"/>
             </intent-filter>
         </receiver>
 
