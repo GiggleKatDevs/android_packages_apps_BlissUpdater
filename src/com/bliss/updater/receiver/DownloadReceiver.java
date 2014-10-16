@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.receiver;
+package com.gigglekat.updater.receiver;
 
 import android.app.DownloadManager;
 import android.app.DownloadManager.Query;
@@ -24,14 +24,14 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.bliss.updater.R;
-import com.bliss.updater.UpdateApplication;
-import com.bliss.updater.UpdatesSettings;
-import com.bliss.updater.misc.Constants;
-import com.bliss.updater.misc.UpdateInfo;
-import com.bliss.updater.service.DownloadService;
-import com.bliss.updater.utils.MD5;
-import com.bliss.updater.utils.Utils;
+import com.gigglekat.updater.R;
+import com.gigglekat.updater.UpdateApplication;
+import com.gigglekat.updater.UpdatesSettings;
+import com.gigglekat.updater.misc.Constants;
+import com.gigglekat.updater.misc.UpdateInfo;
+import com.gigglekat.updater.service.DownloadService;
+import com.gigglekat.updater.utils.MD5;
+import com.gigglekat.updater.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,12 +39,12 @@ import java.io.IOException;
 public class DownloadReceiver extends BroadcastReceiver{
     private static final String TAG = "DownloadReceiver";
 
-    public static final String ACTION_START_DOWNLOAD = "com.bliss.blissupdater.action.START_DOWNLOAD";
+    public static final String ACTION_START_DOWNLOAD = "com.gigglekat.gigglekatupdater.action.START_DOWNLOAD";
     public static final String EXTRA_UPDATE_INFO = "update_info";
 
-    public static final String ACTION_DOWNLOAD_STARTED = "com.bliss.blissupdater.action.DOWNLOAD_STARTED";
+    public static final String ACTION_DOWNLOAD_STARTED = "com.gigglekat.gigglekatupdater.action.DOWNLOAD_STARTED";
 
-    private static final String ACTION_INSTALL_UPDATE = "com.bliss.blissupdater.action.INSTALL_UPDATE";
+    private static final String ACTION_INSTALL_UPDATE = "com.gigglekat.gigglekatupdater.action.INSTALL_UPDATE";
     private static final String EXTRA_FILENAME = "filename";
 
     @Override
@@ -178,7 +178,7 @@ public class DownloadReceiver extends BroadcastReceiver{
             } else {
                 String updateUiName = UpdateInfo.extractUiName(updateFile.getName());
 
-                builder.setSmallIcon(R.drawable.bliss_updater);
+                builder.setSmallIcon(R.drawable.gigglekat_updater);
                 builder.setContentTitle(context.getString(R.string.not_download_success));
                 builder.setContentText(updateUiName);
                 builder.setTicker(context.getString(R.string.not_download_success));
