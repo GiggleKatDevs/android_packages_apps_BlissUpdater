@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.service;
+package com.gigglekat.updater.service;
 
 import android.app.DownloadManager;
 import android.app.IntentService;
@@ -21,12 +21,12 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.bliss.updater.R;
-import com.bliss.updater.misc.Constants;
-import com.bliss.updater.misc.UpdateInfo;
-import com.bliss.updater.receiver.DownloadReceiver;
-import com.bliss.updater.utils.HttpRequestExecutor;
-import com.bliss.updater.utils.Utils;
+import com.gigglekat.updater.R;
+import com.gigglekat.updater.misc.Constants;
+import com.gigglekat.updater.misc.UpdateInfo;
+import com.gigglekat.updater.receiver.DownloadReceiver;
+import com.gigglekat.updater.utils.HttpRequestExecutor;
+import com.gigglekat.updater.utils.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -96,7 +96,7 @@ public class DownloadService extends IntentService {
     }
 
     private String getServerUri() {
-        String propertyUri = SystemProperties.get("bliss.updater.uri");
+        String propertyUri = SystemProperties.get("gigglekat.updater.uri");
         if (!TextUtils.isEmpty(propertyUri)) {
             return propertyUri;
         }
