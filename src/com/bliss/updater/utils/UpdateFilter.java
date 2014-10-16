@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.utils;
+package com.gigglekat.updater.utils;
 
 import java.io.File;
 import java.io.FilenameFilter;
