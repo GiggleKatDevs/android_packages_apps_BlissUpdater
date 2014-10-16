@@ -9,7 +9,7 @@
      or at https://www.gnu.org/licenses/gpl-2.0.txt
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Mises à jour Liquid</string>
+  <string name="app_name">Mises à jour Bliss</string>
   <string name="display_name">Mises à jour</string>
   <string name="unknown">Inconnu</string>
   <string name="menu_refresh">Actualiser</string>
@@ -82,6 +82,6 @@
   <string name="failed_to_load_changelog">Impossible de charger l\'historique des modifications</string>
   <string name="changelog_dialog_title">Historique des modifications</string>
   <string name="loading_changelog">Chargement\u2026</string>
-  <string name="extension_label">Mises à jour de Liquid</string>
+  <string name="extension_label">Mises à jour de Bliss</string>
   <string name="extension_description">Affiche le nombre de nouvelles versions disponibles.</string>
 </resources>
