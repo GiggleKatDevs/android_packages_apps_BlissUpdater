@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.service;
+package com.gigglekat.updater.service;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -22,15 +22,15 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.bliss.updater.R;
-import com.bliss.updater.UpdateApplication;
-import com.bliss.updater.UpdatesSettings;
-import com.bliss.updater.misc.Constants;
-import com.bliss.updater.misc.State;
-import com.bliss.updater.misc.UpdateInfo;
-import com.bliss.updater.receiver.DownloadReceiver;
-import com.bliss.updater.utils.HttpRequestExecutor;
-import com.bliss.updater.utils.Utils;
+import com.gigglekat.updater.R;
+import com.gigglekat.updater.UpdateApplication;
+import com.gigglekat.updater.UpdatesSettings;
+import com.gigglekat.updater.misc.Constants;
+import com.gigglekat.updater.misc.State;
+import com.gigglekat.updater.misc.UpdateInfo;
+import com.gigglekat.updater.receiver.DownloadReceiver;
+import com.gigglekat.updater.utils.HttpRequestExecutor;
+import com.gigglekat.updater.utils.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -61,11 +61,11 @@ public class UpdateCheckService extends IntentService {
     private static final boolean TESTING_DOWNLOAD = false;
 
     // request actions
-    public static final String ACTION_CHECK = "com.bliss.blissupdater.action.CHECK";
-    public static final String ACTION_CANCEL_CHECK = "com.bliss.blissupdater.action.CANCEL_CHECK";
+    public static final String ACTION_CHECK = "com.gigglekat.gigglekatupdater.action.CHECK";
+    public static final String ACTION_CANCEL_CHECK = "com.gigglekat.gigglekatupdater.action.CANCEL_CHECK";
 
     // broadcast actions
-    public static final String ACTION_CHECK_FINISHED = "com.bliss.blissupdater.action.UPDATE_CHECK_FINISHED";
+    public static final String ACTION_CHECK_FINISHED = "com.gigglekat.gigglekatupdater.action.UPDATE_CHECK_FINISHED";
     // extra for ACTION_CHECK_FINISHED: total amount of found updates
     public static final String EXTRA_UPDATE_COUNT = "update_count";
     // extra for ACTION_CHECK_FINISHED: amount of updates that are newer than what is installed
@@ -153,7 +153,7 @@ public class UpdateCheckService extends IntentService {
 
             // Get the notification ready
             Notification.Builder builder = new Notification.Builder(this)
-                    .setSmallIcon(R.drawable.bliss_updater)
+                    .setSmallIcon(R.drawable.gigglekat_updater)
                     .setWhen(System.currentTimeMillis())
                     .setTicker(res.getString(R.string.not_new_updates_found_ticker))
                     .setContentTitle(res.getString(R.string.not_new_updates_found_title))
@@ -226,7 +226,7 @@ public class UpdateCheckService extends IntentService {
     }
 
     private URI getServerURI() {
-        String propertyUpdateUri = SystemProperties.get("bliss.updater.uri");
+        String propertyUpdateUri = SystemProperties.get("gigglekat.updater.uri");
         if (!TextUtils.isEmpty(propertyUpdateUri)) {
             return URI.create(propertyUpdateUri);
         }
@@ -298,7 +298,7 @@ public class UpdateCheckService extends IntentService {
         }
 
         JSONObject params = new JSONObject();
-        params.put("device", TESTING_DOWNLOAD ? "blisstestdevice" : Utils.getDeviceType());
+        params.put("device", TESTING_DOWNLOAD ? "gigglekattestdevice" : Utils.getDeviceType());
         params.put("channels", channels);
         params.put("source_incremental", Utils.getIncremental());
 
