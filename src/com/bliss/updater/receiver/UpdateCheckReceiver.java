@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.receiver;
+package com.gigglekat.updater.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -17,9 +17,9 @@ import android.net.ConnectivityManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.bliss.updater.misc.Constants;
-import com.bliss.updater.service.UpdateCheckService;
-import com.bliss.updater.utils.Utils;
+import com.gigglekat.updater.misc.Constants;
+import com.gigglekat.updater.service.UpdateCheckService;
+import com.gigglekat.updater.utils.Utils;
 
 public class UpdateCheckReceiver extends BroadcastReceiver {
     private static final String TAG = "UpdateCheckReceiver";
