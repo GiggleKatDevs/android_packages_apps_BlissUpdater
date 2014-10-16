@@ -7,17 +7,17 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.service;
+package com.gigglekat.updater.service;
 
 import android.content.Intent;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.bliss.updater.R;
-import com.bliss.updater.UpdatesSettings;
-import com.bliss.updater.misc.State;
-import com.bliss.updater.misc.UpdateInfo;
+import com.gigglekat.updater.R;
+import com.gigglekat.updater.UpdatesSettings;
+import com.gigglekat.updater.misc.State;
+import com.gigglekat.updater.misc.UpdateInfo;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 
@@ -26,9 +26,9 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 public class CMDashClockExtension extends DashClockExtension {
-    private static final String TAG = "BlissDashClockExtension";
+    private static final String TAG = "gigglekatDashClockExtension";
 
-    public static final String ACTION_DATA_UPDATE = "com.bliss.updater.action.DASHCLOCK_DATA_UPDATE";
+    public static final String ACTION_DATA_UPDATE = "com.gigglekat.updater.action.DASHCLOCK_DATA_UPDATE";
 
     private static final int MAX_BODY_ITEMS = 3;
 
@@ -81,7 +81,7 @@ public class CMDashClockExtension extends DashClockExtension {
         // Publish the extension data update.
         publishUpdate(new ExtensionData()
                 .visible(!updates.isEmpty())
-                .icon(R.drawable.ic_extension_bliss)
+                .icon(R.drawable.ic_extension_gigglekat)
                 .status(res.getQuantityString(R.plurals.extension_status, count, count))
                 .expandedTitle(res.getQuantityString(R.plurals.extension_expandedTitle, count, count))
                 .expandedBody(expandedBody.toString())
