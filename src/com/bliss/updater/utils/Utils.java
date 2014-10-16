@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater.utils;
+package com.gigglekat.updater.utils;
 
 import android.app.AlarmManager;
 import android.app.NotificationManager;
@@ -28,9 +28,9 @@ import android.os.storage.StorageVolume;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.bliss.updater.R;
-import com.bliss.updater.misc.Constants;
-import com.bliss.updater.service.UpdateCheckService;
+import com.gigglekat.updater.R;
+import com.gigglekat.updater.misc.Constants;
+import com.gigglekat.updater.service.UpdateCheckService;
 
 import java.io.File;
 import java.io.IOException;
@@ -54,11 +54,11 @@ public class Utils {
     }
 
     public static String getDeviceType() {
-        return SystemProperties.get("ro.bliss.device");
+        return SystemProperties.get("ro.gigglekat.device");
     }
 
     public static String getInstalledVersion() {
-        return SystemProperties.get("ro.bliss.version");
+        return SystemProperties.get("ro.gigglekat.version");
     }
 
     public static int getInstalledApiLevel() {
