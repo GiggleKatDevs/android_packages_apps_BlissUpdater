@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.bliss.updater;
+package com.gigglekat.updater;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -41,13 +41,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bliss.updater.misc.Constants;
-import com.bliss.updater.misc.State;
-import com.bliss.updater.misc.UpdateInfo;
-import com.bliss.updater.receiver.DownloadReceiver;
-import com.bliss.updater.service.UpdateCheckService;
-import com.bliss.updater.utils.UpdateFilter;
-import com.bliss.updater.utils.Utils;
+import com.gigglekat.updater.misc.Constants;
+import com.gigglekat.updater.misc.State;
+import com.gigglekat.updater.misc.UpdateInfo;
+import com.gigglekat.updater.receiver.DownloadReceiver;
+import com.gigglekat.updater.service.UpdateCheckService;
+import com.gigglekat.updater.utils.UpdateFilter;
+import com.gigglekat.updater.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
